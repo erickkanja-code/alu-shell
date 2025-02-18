@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -A1
+find . -type f -empty -printf "%f\n" -o -type d -empty -printf "%f\n"
+
