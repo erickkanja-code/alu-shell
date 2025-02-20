@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Check if the log file is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <apache-access.log>"
+    exit 1
+fi
+
+# Extract the IP and HTTP status code, group and count occurrences, then sort in descending order
+awk '{print $1, $9}' "$1" | sort | uniq -c | sort -nr
