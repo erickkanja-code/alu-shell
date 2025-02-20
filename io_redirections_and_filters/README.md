@@ -1,1 +1,1 @@
-This is the input output redirection assignment directory
+Shell loops conditions and parsing assignment
