@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#trialle
+
+for file in *; do  # Loop through all non-hidden files
+    if [[ "$file" == *-* ]]; then  # Check if the filename contains a dash
+        echo "${file#*-}"  # Remove everything before and including the first dash
+    else
+        echo "$file"  # Print the filename as is
+    fi
+done
+
